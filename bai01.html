@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        let list = ["0384957862","12321312312","012345678","1231231221","098226045","01231232112","21312321312","0911811888"];
+        document.write(list);
+        document.write("<br/>");
+        function check(arr){
+            let count =0;
+            let regexp =/0(9[6-8]\d{7}|3[2-9]\d{7}|86\d{7})/;
+            let vtList = [];
+            for( let i=0;i<arr.length;i++){
+                if (regexp.test(arr[i]) ){
+                    vtList.push(arr[i]);
+                    count++;
+                }
+            }
+            document.write("<br/>");
+            document.write('Co tat ca '+count +  ' so di en th oai: '+ vtList);
+        }
+        check(list);
+    </script>
+</body>
+</html>
